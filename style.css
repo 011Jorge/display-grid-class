@@ -17,6 +17,12 @@
 
   /*Definindo quantas linhas teremos*/
   grid-template-rows: 1fr 5fr 1fr;
+
+  /*Definindo que iremos usar grid-template-areas*/
+  grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
 }
 
 .space {
@@ -27,13 +33,19 @@
 header {
   background-color: purple;
   /*header começa na linha um e termina na linha quatro, assim ele fica sozinho*/
-  grid-column: 1/4;
+  /* grid-column: 1/4; */
+
+  /*Definindo para o gri-template-area que essa div se chama header*/
+  grid-area: header;
 }
 
 main {
   background-color: yellow;
   /*main começa na linha dois e termina na linha trẽs, assim ele fica ao centro*/
-  grid-column: 2/3;
+  /* grid-column: 2/3; */
+
+  /*Definindo para o gri-template-area que essa div se chama main*/
+  grid-area: main;
 }
 
 aside {
@@ -43,11 +55,17 @@ aside {
 footer {
   background-color: red;
   /*footer começa na linha um e termina na linha quatro, assim ele fica sozinho ao final*/
-  grid-column: 1/4;
+  /* grid-column: 1/4; */
+
+  /*Definindo para o gri-template-area que essa div se chama footer*/
+  grid-area: footer;
 }
 
 nav {
   background-color: green;
   /*nav vai para a linha 2 e termina na linha 3, assim voltando para seu lugar específico */
-  grid-row: 2/3;
+  /* grid-row: 2/3; */
+
+  /*Definindo para o gri-template-area que essa div se chama main*/
+  grid-area: nav;
 }
