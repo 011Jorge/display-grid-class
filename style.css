@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+
+  /*Definindo que iremos usar display-grid*/
+  display: grid;
+
+  /*Defiindo quantas columas teremos*/
+  grid-template-columns: 1fr 3fr 1fr;
+
+  /*Definindo quantas linhas teremos*/
+  grid-template-rows: 1fr 5fr 1fr;
+}
+
+.space {
+  color: white;
+  font-size: 30px;
+}
+
+header {
+  background-color: purple;
+  /*header começa na linha um e termina na linha quatro, assim ele fica sozinho*/
+  grid-column: 1/4;
+}
+
+main {
+  background-color: yellow;
+  /*main começa na linha dois e termina na linha trẽs, assim ele fica ao centro*/
+  grid-column: 2/3;
+}
+
+aside {
+  background-color: blue;
+}
+
+footer {
+  background-color: red;
+  /*footer começa na linha um e termina na linha quatro, assim ele fica sozinho ao final*/
+  grid-column: 1/4;
+}
+
+nav {
+  background-color: green;
+  /*nav vai para a linha 2 e termina na linha 3, assim voltando para seu lugar específico */
+  grid-row: 2/3;
+}
